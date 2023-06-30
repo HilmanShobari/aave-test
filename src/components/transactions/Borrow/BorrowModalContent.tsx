@@ -57,47 +57,48 @@ const BorrowModeSwitch = ({
   stableRate,
 }: BorrowModeSwitchProps) => {
   return (
-    <Row
-      caption={
-        <APYTypeTooltip
-          text={<Trans>Borrow APY rate</Trans>}
-          key="APY type_modal"
-          variant="description"
-        />
-      }
-      captionVariant="description"
-      mb={5}
-      flexDirection="column"
-      align="flex-start"
-      captionColor="text.secondary"
-    >
-      <StyledTxModalToggleGroup
-        color="primary"
-        value={interestRateMode}
-        exclusive
-        onChange={(_, value) => setInterestRateMode(value)}
-        sx={{ mt: 0.5 }}
-      >
-        <StyledTxModalToggleButton
-          value={InterestRate.Variable}
-          disabled={interestRateMode === InterestRate.Variable}
-        >
-          <Typography variant="buttonM" sx={{ mr: 1 }}>
-            <Trans>Variable</Trans>
-          </Typography>
-          <FormattedNumber value={variableRate} percent variant="secondary14" />
-        </StyledTxModalToggleButton>
-        <StyledTxModalToggleButton
-          value={InterestRate.Stable}
-          disabled={interestRateMode === InterestRate.Stable}
-        >
-          <Typography variant="buttonM" sx={{ mr: 1 }}>
-            <Trans>Stable</Trans>
-          </Typography>
-          <FormattedNumber value={stableRate} percent variant="secondary14" />
-        </StyledTxModalToggleButton>
-      </StyledTxModalToggleGroup>
-    </Row>
+    <></>
+    // <Row
+    //   caption={
+    //     <APYTypeTooltip
+    //       text={<Trans>Borrow APY rate</Trans>}
+    //       key="APY type_modal"
+    //       variant="description"
+    //     />
+    //   }
+    //   captionVariant="description"
+    //   mb={5}
+    //   flexDirection="column"
+    //   align="flex-start"
+    //   captionColor="text.secondary"
+    // >
+    //   <StyledTxModalToggleGroup
+    //     color="primary"
+    //     value={interestRateMode}
+    //     exclusive
+    //     onChange={(_, value) => setInterestRateMode(value)}
+    //     sx={{ mt: 0.5 }}
+    //   >
+    //     <StyledTxModalToggleButton
+    //       value={InterestRate.Variable}
+    //       disabled={interestRateMode === InterestRate.Variable}
+    //     >
+    //       <Typography variant="buttonM" sx={{ mr: 1 }}>
+    //         <Trans>Variable</Trans>
+    //       </Typography>
+    //       <FormattedNumber value={variableRate} percent variant="secondary14" />
+    //     </StyledTxModalToggleButton>
+    //     <StyledTxModalToggleButton
+    //       value={InterestRate.Stable}
+    //       disabled={interestRateMode === InterestRate.Stable}
+    //     >
+    //       <Typography variant="buttonM" sx={{ mr: 1 }}>
+    //         <Trans>Stable</Trans>
+    //       </Typography>
+    //       <FormattedNumber value={stableRate} percent variant="secondary14" />
+    //     </StyledTxModalToggleButton>
+    //   </StyledTxModalToggleGroup>
+    // </Row>
   );
 };
 
@@ -281,7 +282,7 @@ export const BorrowModalContent = ({
       )}
 
       <TxModalDetails gasLimit={gasLimit}>
-        <DetailsIncentivesLine incentives={incentive} symbol={poolReserve.symbol} />
+        {/* <DetailsIncentivesLine incentives={incentive} symbol={poolReserve.symbol} /> */}
         <DetailsHFLine
           visibleHfChange={!!amount}
           healthFactor={user.healthFactor}

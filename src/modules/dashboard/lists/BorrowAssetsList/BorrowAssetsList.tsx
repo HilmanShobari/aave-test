@@ -74,21 +74,21 @@ const head = [
     // ),
     // sortKey: 'variableBorrowAPY',
   },
-  {
-    title: <Trans>APY, stable</Trans>,
-    // title: (
-    //   <StableAPYTooltip
-    //     event={{
-    //       eventName: GENERAL.TOOL_TIP,
-    //       eventParams: { tooltip: 'Stable Borrow APY' },
-    //     }}
-    //     text={<Trans>APY, stable</Trans>}
-    //     key="stableBorrowAPY"
-    //     variant="subheader2"
-    //   />
-    // ),
-    // sortKey: 'stableBorrowAPY',
-  },
+  // {
+  // title: <Trans>APY, stable</Trans>,
+  // title: (
+  //   <StableAPYTooltip
+  //     event={{
+  //       eventName: GENERAL.TOOL_TIP,
+  //       eventParams: { tooltip: 'Stable Borrow APY' },
+  //     }}
+  //     text={<Trans>APY, stable</Trans>}
+  //     key="stableBorrowAPY"
+  //     variant="subheader2"
+  //   />
+  // ),
+  // sortKey: 'stableBorrowAPY',
+  // },
 ];
 
 export const BorrowAssetsList = () => {

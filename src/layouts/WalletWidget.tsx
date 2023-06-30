@@ -146,7 +146,7 @@ export default function WalletWidget({ open, setOpen, headerHeight }: WalletWidg
       </Box>
       {!md && (
         <Box sx={{ display: 'flex', flexDirection: 'row', padding: '0 16px 10px' }}>
-          <Button
+          {/* <Button
             variant="outlined"
             sx={{
               padding: '0 5px',
@@ -156,13 +156,13 @@ export default function WalletWidget({ open, setOpen, headerHeight }: WalletWidg
             onClick={handleSwitchWallet}
           >
             Switch wallet
-          </Button>
+          </Button> */}
           <Button
             variant="outlined"
             sx={{
               padding: '0 5px',
             }}
-            size="small"
+            size="medium"
             onClick={handleDisconnect}
             data-cy={`disconnect-wallet`}
           >
@@ -170,9 +170,9 @@ export default function WalletWidget({ open, setOpen, headerHeight }: WalletWidg
           </Button>
         </Box>
       )}
-      <Divider sx={{ my: { xs: 7, md: 0 }, borderColor: { xs: '#FFFFFF1F', md: 'divider' } }} />
+      {/* <Divider sx={{ my: { xs: 7, md: 0 }, borderColor: { xs: '#FFFFFF1F', md: 'divider' } }} /> */}
 
-      <Box component={component} disabled>
+      {/* <Box component={component} disabled>
         <Box sx={{ display: 'flex', flexDirection: 'column', width: '100%' }}>
           <Box
             sx={{
@@ -202,8 +202,8 @@ export default function WalletWidget({ open, setOpen, headerHeight }: WalletWidg
             </Typography>
           </Box>
         </Box>
-      </Box>
-      <Divider sx={{ my: { xs: 7, md: 0 }, borderColor: { xs: '#FFFFFF1F', md: 'divider' } }} />
+      </Box> */}
+      {/* <Divider sx={{ my: { xs: 7, md: 0 }, borderColor: { xs: '#FFFFFF1F', md: 'divider' } }} /> */}
 
       {/* <Box
         component={component}
@@ -233,12 +233,12 @@ export default function WalletWidget({ open, setOpen, headerHeight }: WalletWidg
         </ListItemText>
       </Box> */}
 
-      <Box
+      {/* <Box
         component={component}
         sx={{ color: { xs: '#F1F1F3', md: 'text.primary', cursor: 'pointer' } }}
         onClick={handleCopy}
       >
-        {/* <ListItemIcon
+        <ListItemIcon
           sx={{
             color: {
               xs: '#F1F1F3',
@@ -251,20 +251,20 @@ export default function WalletWidget({ open, setOpen, headerHeight }: WalletWidg
           <SvgIcon fontSize="small">
             <DuplicateIcon />
           </SvgIcon>
-        </ListItemIcon> */}
+        </ListItemIcon>
         <ListItemText>
           <Trans>Copy address</Trans>
         </ListItemText>
-      </Box>
+      </Box> */}
 
-      {networkConfig?.explorerLinkBuilder && (
+      {/* {networkConfig?.explorerLinkBuilder && (
         <Link href={networkConfig.explorerLinkBuilder({ address: currentAccount })}>
           <Box
             component={component}
             sx={{ color: { xs: '#F1F1F3', md: 'text.primary' } }}
             onClick={handleViewOnExplorer}
           >
-            {/* <ListItemIcon
+            <ListItemIcon
               sx={{
                 color: {
                   xs: '#F1F1F3',
@@ -277,13 +277,13 @@ export default function WalletWidget({ open, setOpen, headerHeight }: WalletWidg
               <SvgIcon fontSize="small">
                 <ExternalLinkIcon />
               </SvgIcon>
-            </ListItemIcon> */}
+            </ListItemIcon>
             <ListItemText>
               <Trans>View on Explorer</Trans>
             </ListItemText>
           </Box>
         </Link>
-      )}
+      )} */}
       {md && (
         <>
           <Divider sx={{ my: { xs: 7, md: 0 }, borderColor: { xs: '#FFFFFF1F', md: 'divider' } }} />

@@ -31,12 +31,12 @@ export default function Aave500Page() {
           <Typography variant="display1" sx={{ mt: 8, mb: 3 }}>
             <Trans>Something went wrong</Trans>
           </Typography>
-          <Typography sx={{ mt: 2, mb: 5, maxWidth: 480 }}>
+          {/* <Typography sx={{ mt: 2, mb: 5, maxWidth: 480 }}>
             <Trans>
               Sorry, an unexpected error happened. In the meantime you may try reloading the page,
               or come back later.
             </Trans>
-          </Typography>
+          </Typography> */}
           <Button
             variant="outlined"
             color="primary"
@@ -50,7 +50,7 @@ export default function Aave500Page() {
           >
             <Trans>Reload the page</Trans>
           </Button>
-          <Box
+          {/* <Box
             display="flex"
             alignItems="center"
             justifyContent="center"
@@ -78,7 +78,7 @@ export default function Aave500Page() {
             >
               <Trans>Copy error message</Trans>
             </Button>
-          </Box>
+          </Box> */}
         </Paper>
       </ContentContainer>
     </>

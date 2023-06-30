@@ -99,28 +99,29 @@ export const DashboardTopPanel = () => {
   return (
     <>
       {showMigrateButton && downToSM && (
-        <Box sx={{ width: '100%' }}>
-          <Link href={ROUTES.migrationTool}>
-            <Button
-              variant="gradient"
-              sx={{
-                height: '40px',
-                width: '100%',
-              }}
-            >
-              <Typography variant="buttonM">
-                <Trans>Migrate to {market.marketTitle} v3 Market</Trans>
-              </Typography>
-            </Button>
-          </Link>
-        </Box>
+        <></>
+        // <Box sx={{ width: '100%' }}>
+        //   <Link href={ROUTES.migrationTool}>
+        //     <Button
+        //       variant="gradient"
+        //       sx={{
+        //         height: '40px',
+        //         width: '100%',
+        //       }}
+        //     >
+        //       <Typography variant="buttonM">
+        //         <Trans>Migrate to {market.marketTitle} v3 Market</Trans>
+        //       </Typography>
+        //     </Button>
+        //   </Link>
+        // </Box>
       )}
       <TopInfoPanel
         titleComponent={
           <Box sx={{ display: 'flex', alignItems: 'center' }}>
             <PageTitle
-              pageTitle={<Trans>Dashboard</Trans>}
-              withMarketSwitcher={true}
+              pageTitle={<Trans>Polygon Market</Trans>} //Dashboard
+              // withMarketSwitcher={true}
               bridge={currentNetworkConfig.bridge}
             />
             {showMigrateButton && !downToSM && (
@@ -153,17 +154,17 @@ export const DashboardTopPanel = () => {
           )}
         </TopInfoPanelItem>
 
-        <TopInfoPanelItem
+        {/* <TopInfoPanelItem
           icon={<NetAPYIcon />}
           title={
             <div style={{ display: 'flex' }}>
               <Trans>Net APY</Trans>
-              {/* <NetAPYTooltip
+              <NetAPYTooltip
                 event={{
                   eventName: GENERAL.TOOL_TIP,
                   eventParams: { tooltip: 'NET APY: Dashboard Banner' },
                 }}
-              /> */}
+              />
             </div>
           }
           loading={loading}
@@ -180,7 +181,7 @@ export const DashboardTopPanel = () => {
           ) : (
             <NoData variant={noDataTypographyVariant} sx={{ opacity: '0.7' }} />
           )}
-        </TopInfoPanelItem>
+        </TopInfoPanelItem> */}
 
         {currentAccount && user?.healthFactor !== '-1' && (
           <TopInfoPanelItem

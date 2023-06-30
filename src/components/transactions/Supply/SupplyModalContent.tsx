@@ -230,12 +230,12 @@ export const SupplyModalContent = React.memo(
         />
 
         <TxModalDetails gasLimit={gasLimit} skipLoad={true} disabled={Number(amount) === 0}>
-          <DetailsNumberLine description={<Trans>Supply APY</Trans>} value={supplyApy} percent />
-          <DetailsIncentivesLine
+          {/* <DetailsNumberLine description={<Trans>Supply APY</Trans>} value={supplyApy} percent /> */}
+          {/* <DetailsIncentivesLine
             incentives={poolReserve.aIncentivesData}
             symbol={poolReserve.symbol}
           />
-          <DetailsCollateralLine collateralType={collateralType} />
+          <DetailsCollateralLine collateralType={collateralType} /> */}
           <DetailsHFLine
             visibleHfChange={!!amount}
             healthFactor={user ? user.healthFactor : '-1'}

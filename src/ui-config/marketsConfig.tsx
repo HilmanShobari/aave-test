@@ -107,6 +107,25 @@ export enum CustomMarket {
 export const marketsData: {
   [key in keyof typeof CustomMarket]: MarketDataType;
 } = {
+  [CustomMarket.proto_mumbai_v3]: {
+    marketTitle: 'Polygon Mumbai',
+    chainId: ChainId.mumbai,
+    enabledFeatures: {
+      incentives: true,
+      faucet: true,
+    },
+    //  subgraphUrl: 'https://api.thegraph.com/subgraphs/name/aave/protocol-v3-mumbai',  needs re-deployment
+    addresses: {
+      LENDING_POOL_ADDRESS_PROVIDER: AaveV3Mumbai.POOL_ADDRESSES_PROVIDER,
+      LENDING_POOL: AaveV3Mumbai.POOL,
+      WETH_GATEWAY: AaveV3Mumbai.WETH_GATEWAY,
+      FAUCET: AaveV3Mumbai.FAUCET,
+      WALLET_BALANCE_PROVIDER: AaveV3Mumbai.WALLET_BALANCE_PROVIDER,
+      UI_POOL_DATA_PROVIDER: AaveV3Mumbai.UI_POOL_DATA_PROVIDER,
+      UI_INCENTIVE_DATA_PROVIDER: AaveV3Mumbai.UI_INCENTIVE_DATA_PROVIDER,
+    },
+    v3: true,
+  },
   [CustomMarket.proto_mainnet_v3]: {
     marketTitle: 'Ethereum',
     chainId: ChainId.mainnet,
@@ -532,25 +551,25 @@ export const marketsData: {
       marketName: 'polygon',
     },
   },
-  [CustomMarket.proto_mumbai_v3]: {
-    marketTitle: 'Polygon Mumbai',
-    chainId: ChainId.mumbai,
-    enabledFeatures: {
-      incentives: true,
-      faucet: true,
-    },
-    //  subgraphUrl: 'https://api.thegraph.com/subgraphs/name/aave/protocol-v3-mumbai',  needs re-deployment
-    addresses: {
-      LENDING_POOL_ADDRESS_PROVIDER: AaveV3Mumbai.POOL_ADDRESSES_PROVIDER,
-      LENDING_POOL: AaveV3Mumbai.POOL,
-      WETH_GATEWAY: AaveV3Mumbai.WETH_GATEWAY,
-      FAUCET: AaveV3Mumbai.FAUCET,
-      WALLET_BALANCE_PROVIDER: AaveV3Mumbai.WALLET_BALANCE_PROVIDER,
-      UI_POOL_DATA_PROVIDER: AaveV3Mumbai.UI_POOL_DATA_PROVIDER,
-      UI_INCENTIVE_DATA_PROVIDER: AaveV3Mumbai.UI_INCENTIVE_DATA_PROVIDER,
-    },
-    v3: true,
-  },
+  // [CustomMarket.proto_mumbai_v3]: {
+  //   marketTitle: 'Polygon Mumbai',
+  //   chainId: ChainId.mumbai,
+  //   enabledFeatures: {
+  //     incentives: true,
+  //     faucet: true,
+  //   },
+  //   //  subgraphUrl: 'https://api.thegraph.com/subgraphs/name/aave/protocol-v3-mumbai',  needs re-deployment
+  //   addresses: {
+  //     LENDING_POOL_ADDRESS_PROVIDER: AaveV3Mumbai.POOL_ADDRESSES_PROVIDER,
+  //     LENDING_POOL: AaveV3Mumbai.POOL,
+  //     WETH_GATEWAY: AaveV3Mumbai.WETH_GATEWAY,
+  //     FAUCET: AaveV3Mumbai.FAUCET,
+  //     WALLET_BALANCE_PROVIDER: AaveV3Mumbai.WALLET_BALANCE_PROVIDER,
+  //     UI_POOL_DATA_PROVIDER: AaveV3Mumbai.UI_POOL_DATA_PROVIDER,
+  //     UI_INCENTIVE_DATA_PROVIDER: AaveV3Mumbai.UI_INCENTIVE_DATA_PROVIDER,
+  //   },
+  //   v3: true,
+  // },
   [CustomMarket.proto_goerli]: {
     marketTitle: 'Ethereum Görli',
     chainId: ChainId.goerli,

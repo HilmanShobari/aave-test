@@ -232,7 +232,7 @@ export const WithdrawModalContent = ({
       )}
 
       <TxModalDetails gasLimit={gasLimit}>
-        <DetailsNumberLine
+        {/* <DetailsNumberLine
           description={<Trans>Remaining supply</Trans>}
           value={underlyingBalance.minus(amount || '0').toString(10)}
           symbol={
@@ -240,7 +240,7 @@ export const WithdrawModalContent = ({
               ? currentNetworkConfig.baseAssetSymbol
               : poolReserve.symbol
           }
-        />
+        /> */}
         <DetailsHFLine
           visibleHfChange={!!_amount}
           healthFactor={user ? user.healthFactor : '-1'}

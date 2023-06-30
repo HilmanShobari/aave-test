@@ -45,21 +45,21 @@ const head = [
     title: <Trans key="APY">APY</Trans>,
     // sortKey: 'borrowAPY',
   },
-  {
-    title: <Trans key="APY type">APY type</Trans>,
-    // title: (
-    //   <APYTypeTooltip
-    //     event={{
-    //       eventName: GENERAL.TOOL_TIP,
-    //       eventParams: { tooltip: 'APY Type Borrow' },
-    //     }}
-    //     text={<Trans>APY type</Trans>}
-    //     key="APY type"
-    //     variant="subheader2"
-    //   />
-    // ),
-    // sortKey: 'typeAPY',
-  },
+  // {
+  //   title: <Trans key="APY type">APY type</Trans>,
+  //   title: (
+  //     <APYTypeTooltip
+  //       event={{
+  //         eventName: GENERAL.TOOL_TIP,
+  //         eventParams: { tooltip: 'APY Type Borrow' },
+  //       }}
+  //       text={<Trans>APY type</Trans>}
+  //       key="APY type"
+  //       variant="subheader2"
+  //     />
+  //   ),
+  //   sortKey: 'typeAPY',
+  // },
 ];
 
 export const BorrowedPositionsList = () => {
@@ -183,19 +183,19 @@ export const BorrowedPositionsList = () => {
                 //   />
                 // }
               />
-              <ListTopInfoItem
+              {/* <ListTopInfoItem
                 title={<Trans>Borrow power used</Trans>}
                 value={collateralUsagePercent || 0}
                 percent
-                // tooltip={
-                //   <BorrowPowerTooltip
-                //     event={{
-                //       eventName: GENERAL.TOOL_TIP,
-                //       eventParams: { tooltip: 'Borrow power used' },
-                //     }}
-                //   />
-                // }
-              />
+                tooltip={
+                  <BorrowPowerTooltip
+                    event={{
+                      eventName: GENERAL.TOOL_TIP,
+                      eventParams: { tooltip: 'Borrow power used' },
+                    }}
+                  />
+                }
+              /> */}
             </>
           )}
         </>

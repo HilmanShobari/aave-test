@@ -203,7 +203,7 @@ export const WalletSelector = () => {
         walletName="Browser wallet"
         walletType={WalletType.INJECTED}
       />
-      <WalletRow
+      {/* <WalletRow
         key="walletconnect_wallet"
         walletName="WalletConnect"
         walletType={WalletType.WALLET_CONNECT}
@@ -214,14 +214,14 @@ export const WalletSelector = () => {
         walletType={WalletType.WALLET_LINK}
       />
       <WalletRow key="torus_wallet" walletName="Torus" walletType={WalletType.TORUS} />
-      <WalletRow key="frame_wallet" walletName="Frame" walletType={WalletType.FRAME} />
-      <Box sx={{ display: 'flex', alignItems: 'center', mb: 1, padding: '10px 0' }}>
+      <WalletRow key="frame_wallet" walletName="Frame" walletType={WalletType.FRAME} /> */}
+      {/* <Box sx={{ display: 'flex', alignItems: 'center', mb: 1, padding: '10px 0' }}>
         <Typography variant="subheader1" color="text.secondary">
           <Trans>Track wallet balance in read-only mode</Trans>
         </Typography>
         <ReadOnlyModeTooltip />
-      </Box>
-      <form onSubmit={handleSubmit}>
+      </Box> */}
+      {/* <form onSubmit={handleSubmit}>
         <InputBase
           sx={(theme) => ({
             py: 1,
@@ -262,8 +262,8 @@ export const WalletSelector = () => {
         >
           <Trans>Track wallet</Trans>
         </Button>
-      </form>
-      {validAddressError && (
+      </form> */}
+      {/* {validAddressError && (
         <Typography variant="helperText" color="error.main">
           <Trans>Please enter a valid wallet address.</Trans>
         </Typography>
@@ -282,7 +282,7 @@ export const WalletSelector = () => {
           Providers. Your access to the wallet might be reliant on the External Provider being
           operational.
         </Trans>
-      </Typography>
+      </Typography> */}
     </Box>
   );
 };

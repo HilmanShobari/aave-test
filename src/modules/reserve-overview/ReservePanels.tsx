@@ -35,7 +35,7 @@ export const PanelItem: React.FC<PanelItemProps> = ({ title, children, className
         position: 'relative',
         '&:not(:last-child)': {
           pr: 4,
-          mr: 4,
+          // mr: 4,
         },
         ...(mdUp
           ? {
@@ -45,7 +45,7 @@ export const PanelItem: React.FC<PanelItemProps> = ({ title, children, className
                 position: 'absolute',
                 right: 4,
                 top: 'calc(50% - 17px)',
-                borderRight: (theme) => `1px solid ${theme.palette.divider}`,
+                // borderRight: (theme) => `1px solid ${theme.palette.divider}`,
               },
             }
           : {}),

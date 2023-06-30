@@ -59,7 +59,7 @@ export const ReserveConfiguration: React.FC<ReserveConfigurationProps> = ({ rese
         }}
       >
         <Typography variant="h3">
-          <Trans>Reserve status &#38; configuration</Trans>
+          <Trans>Reserve status & configuration</Trans>
         </Typography>
       </Box>
 

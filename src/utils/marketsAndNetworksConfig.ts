@@ -103,7 +103,7 @@ export function getSupportedChainIds(): number[] {
           return isTestnet;
         }
 
-        return !isTestnet;
+        return isTestnet; //default is testnet
       })
       .reduce(
         (acc, value) => acc.add(marketsData[value as keyof typeof CustomMarket].chainId),

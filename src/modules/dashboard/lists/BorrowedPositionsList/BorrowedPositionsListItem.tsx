@@ -67,7 +67,7 @@ export const BorrowedPositionsListItem = ({
         symbol={reserve.symbol}
       />
 
-      <ListColumn>
+      {/* <ListColumn>
         <ListItemAPYButton
           stableBorrowRateEnabled={stableBorrowRateEnabled}
           borrowRateMode={borrowRateMode}
@@ -78,7 +78,7 @@ export const BorrowedPositionsListItem = ({
           underlyingAsset={reserve.underlyingAsset}
           currentMarket={currentMarket}
         />
-      </ListColumn>
+      </ListColumn> */}
 
       <ListButtonsColumn>
         <Button

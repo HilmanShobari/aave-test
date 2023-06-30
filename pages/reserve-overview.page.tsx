@@ -87,7 +87,7 @@ export default function ReserveOverview() {
               width: { xs: '100%', lg: '416px' },
             }}
           >
-            <ReserveActions reserve={reserve} />
+            {/* <ReserveActions reserve={reserve} /> */}
           </Box>
         </Box>
       </ContentContainer>

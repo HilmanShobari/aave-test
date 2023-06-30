@@ -238,7 +238,7 @@ export const RepayModalContent = ({
       )}
 
       <TxModalDetails gasLimit={gasLimit}>
-        <DetailsNumberLineWithSub
+        {/* <DetailsNumberLineWithSub
           description={<Trans>Remaining debt</Trans>}
           futureValue={amountAfterRepay}
           futureValueUSD={amountAfterRepayInUsd.toString(10)}
@@ -249,7 +249,7 @@ export const RepayModalContent = ({
               ? networkConfig.baseAssetSymbol
               : poolReserve.iconSymbol
           }
-        />
+        /> */}
         <DetailsHFLine
           visibleHfChange={!!_amount}
           healthFactor={user?.healthFactor}

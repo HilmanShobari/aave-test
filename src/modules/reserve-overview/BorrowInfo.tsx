@@ -47,7 +47,7 @@ export const BorrowInfo = ({
         {showBorrowCapStatus ? (
           // With a borrow cap
           <>
-            <CapsCircularStatus
+            {/* <CapsCircularStatus
               value={borrowCap.percentUsed}
               tooltipContent={
                 <>
@@ -73,38 +73,39 @@ export const BorrowInfo = ({
                   </Trans>
                 </>
               }
-            />
+            /> */}
             <PanelItem
               title={
-                <Box display="flex" alignItems="center">
-                  <Trans>Total borrowed</Trans>
-                  <TextWithTooltip
-                    event={{
-                      eventName: GENERAL.TOOL_TIP,
-                      eventParams: {
-                        tooltip: 'Total borrowed',
-                        asset: reserve.underlyingAsset,
-                        assetName: reserve.name,
-                      },
-                    }}
-                  >
-                    <>
-                      <Trans>
-                        Borrowing of this asset is limited to a certain amount to minimize liquidity
-                        pool insolvency.
-                      </Trans>{' '}
-                      <Link
-                        href="https://docs.aave.com/developers/whats-new/supply-borrow-caps"
-                        underline="always"
-                      >
-                        <Trans>Learn more</Trans>
-                      </Link>
-                    </>
-                  </TextWithTooltip>
-                </Box>
+                <></>
+                // <Box display="flex" alignItems="center">
+                //   <Trans>Total borrowed</Trans>
+                //   <TextWithTooltip
+                //     event={{
+                //       eventName: GENERAL.TOOL_TIP,
+                //       eventParams: {
+                //         tooltip: 'Total borrowed',
+                //         asset: reserve.underlyingAsset,
+                //         assetName: reserve.name,
+                //       },
+                //     }}
+                //   >
+                //     <>
+                //       <Trans>
+                //         Borrowing of this asset is limited to a certain amount to minimize liquidity
+                //         pool insolvency.
+                //       </Trans>{' '}
+                //       <Link
+                //         href="https://docs.aave.com/developers/whats-new/supply-borrow-caps"
+                //         underline="always"
+                //       >
+                //         <Trans>Learn more</Trans>
+                //       </Link>
+                //     </>
+                //   </TextWithTooltip>
+                // </Box>
               }
             >
-              <Box>
+              {/* <Box>
                 <FormattedNumber value={reserve.totalDebt} variant="main16" />
                 <Typography
                   component="span"
@@ -127,21 +128,22 @@ export const BorrowInfo = ({
                   <Trans>of</Trans>
                 </Typography>
                 <ReserveSubheader value={reserve.borrowCapUSD} />
-              </Box>
+              </Box> */}
             </PanelItem>
           </>
         ) : (
+          <></>
           // Without a borrow cap
-          <PanelItem
-            title={
-              <Box display="flex" alignItems="center">
-                <Trans>Total borrowed</Trans>
-              </Box>
-            }
-          >
-            <FormattedNumber value={reserve.totalDebt} variant="main16" />
-            <ReserveSubheader value={reserve.totalDebtUSD} />
-          </PanelItem>
+          // <PanelItem
+          //   title={
+          //     <Box display="flex" alignItems="center">
+          //       <Trans>Total borrowed</Trans>
+          //     </Box>
+          //   }
+          // >
+          //   <FormattedNumber value={reserve.totalDebt} variant="main16" />
+          //   <ReserveSubheader value={reserve.totalDebtUSD} />
+          // </PanelItem>
         )}
         <PanelItem
           title={
@@ -149,12 +151,12 @@ export const BorrowInfo = ({
               event={{
                 eventName: GENERAL.TOOL_TIP,
                 eventParams: {
-                  tooltip: 'APY, variable',
+                  tooltip: 'APY', //APY Variable
                   asset: reserve.underlyingAsset,
                   assetName: reserve.name,
                 },
               }}
-              text={<Trans>APY, variable</Trans>}
+              text={<Trans>APY</Trans>}
               key="APY_res_variable_type"
               variant="description"
             />
@@ -168,30 +170,31 @@ export const BorrowInfo = ({
           />
         </PanelItem>
         {reserve.stableBorrowRateEnabled && (
-          <PanelItem
-            title={
-              <StableAPYTooltip
-                event={{
-                  eventName: GENERAL.TOOL_TIP,
-                  eventParams: {
-                    tooltip: 'APY, stable',
-                    asset: reserve.underlyingAsset,
-                    assetName: reserve.name,
-                  },
-                }}
-                text={<Trans>APY, stable</Trans>}
-                key="APY_res_stable_type"
-                variant="description"
-              />
-            }
-          >
-            <FormattedNumber value={reserve.stableBorrowAPY} percent variant="main16" />
-            <IncentivesButton
-              symbol={reserve.symbol}
-              incentives={reserve.sIncentivesData}
-              displayBlank={true}
-            />
-          </PanelItem>
+          <></>
+          // <PanelItem
+          //   title={
+          //     <StableAPYTooltip
+          //       event={{
+          //         eventName: GENERAL.TOOL_TIP,
+          //         eventParams: {
+          //           tooltip: 'APY Stable', //APY Stable
+          //           asset: reserve.underlyingAsset,
+          //           assetName: reserve.name,
+          //         },
+          //       }}
+          //       text={<Trans>APY Stable</Trans>}
+          //       key="APY_res_stable_type"
+          //       variant="description"
+          //     />
+          //   }
+          // >
+          //   <FormattedNumber value={reserve.stableBorrowAPY} percent variant="main16" />
+          //   <IncentivesButton
+          //     symbol={reserve.symbol}
+          //     incentives={reserve.sIncentivesData}
+          //     displayBlank={true}
+          //   />
+          // </PanelItem>
         )}
         {reserve.borrowCapUSD && reserve.borrowCapUSD !== '0' && (
           <PanelItem title={<Trans>Borrow cap</Trans>}>
